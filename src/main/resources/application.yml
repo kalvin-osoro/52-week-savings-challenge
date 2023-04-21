@@ -1,0 +1,41 @@
+
+
+#  jdbc:mysql://localhost:3306/alterna?useSSL=false&serverTimeZone=UTC*useLegacyDateTimeCode=false
+spring:
+
+
+
+  cors:
+    allowed-origins: "*"
+
+
+  #jdbc:mysql://alterna-savings.caznqi4vn7za.eu-north-1.rds.amazonaws.com:3306/alterna_db?useSSL=false&serverTimeZone=UTC*useLegacyDateTimeCode=false
+  #  jdbc:mysql://localhost:3306/alterna?useSSL=false&serverTimeZone=UTC*useLegacyDateTimeCode=false
+
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/alterna?useSSL=false&serverTimeZone=UTC*useLegacyDateTimeCode=false
+    username: root
+  #    username: admin
+  #    password: Athena0057
+
+
+
+
+  #  datasource:
+  #    url: jdbc:mysql://alterna-savings.caznqi4vn7za.eu-north-1.rds.amazonaws.com:3306/alterna_db?useSSL=false&serverTimeZone=UTC*useLegacyDateTimeCode=false
+  #    username: admin
+  #    password: Athena0057
+  #    driver-class-name: com.mysql.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+    database: mysql
+
+server:
+  address: 0.0.0.0
